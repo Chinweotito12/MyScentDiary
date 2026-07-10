@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete your MyScentDiary delivery details and review your order.">
+  <title>Checkout | MyScentDiary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="checkout">
+  <header class="site-header">
+    <nav class="navbar section-content" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="MyScentDiary home"><img src="img/logo.jpeg" alt="MyScentDiary" class="logo-image">
+                      <span class="logo-text">MyScentDiary</span>
+         </a>
+      <ul class="nav-menu" id="navMenu">
+        <li class="mobile-menu-head"><span>Menu</span><button class="close-menu" id="closeMenu" type="button" aria-label="Close menu">&times;</button></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item dropdown"><div class="shop-wrapper"><a href="shop.html" class="nav-link">Shop All</a><button class="dropdown-toggle" id="dropdownToggle" type="button" aria-label="Open shop categories" aria-expanded="false">&#8964;</button></div><ul class="dropdown-menu"><li><a href="forher.html" class="dropdown-link">For Her</a></li><li><a href="forhim.html" class="dropdown-link">For Him</a></li><li><a href="unisex.html" class="dropdown-link">Unisex</a></li></ul></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions"><a href="cart.html" class="nav-link cart-pill" aria-label="View cart"><span class="cart-icon" aria-hidden="true"></span><span class="cart-count">0</span></a><button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">&#9776;</button></div>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+  <main class="checkout-page section-content">
+    <section class="page-hero compact">
+      <p class="eyebrow">Secure checkout</p>
+      <h1>Delivery and payment</h1>
+      <p>Complete the required details, then review your invoice before sending the order through WhatsApp.</p>
+    </section>
+
+    <form class="checkout-layout" id="checkoutForm" novalidate>
+      <div class="checkout-sections">
+        <section class="checkout-card">
+          <div class="section-heading"><span>1</span><div><p class="eyebrow">Customer information</p><h2>Contact details</h2></div></div>
+          <div class="form-grid">
+            <label>First Name <span aria-hidden="true">*</span><input name="firstName" autocomplete="given-name" required></label>
+            <label>Last Name <span aria-hidden="true">*</span><input name="lastName" autocomplete="family-name" required></label>
+            <label>Phone Number <span aria-hidden="true">*</span><input type="tel" name="phone" autocomplete="tel" required></label>
+            <label>Email Address <span class="optional">Optional</span><input type="email" name="email" autocomplete="email"></label>
+          </div>
+        </section>
+
+        <section class="checkout-card">
+          <div class="section-heading"><span>2</span><div><p class="eyebrow">Delivery address</p><h2>Where should we deliver?</h2></div></div>
+          <div class="form-grid">
+            <label>Country <span aria-hidden="true">*</span><input name="country" autocomplete="country-name" required></label>
+            <label>City <span aria-hidden="true">*</span><input name="city" autocomplete="address-level2" required></label>
+            <label class="full-field">Street Address <span aria-hidden="true">*</span><input name="streetAddress" autocomplete="street-address" required></label>
+            <label>Apartment / Building <span class="optional">Optional</span><input name="apartment" autocomplete="address-line2"></label>
+            <label>Postal Code <span class="optional">Optional</span><input name="postalCode" autocomplete="postal-code"></label>
+          </div>
+        </section>
+
+        <section class="checkout-card">
+          <div class="section-heading"><span>3</span><div><p class="eyebrow">Payment method</p><h2>Pay on delivery</h2></div></div>
+          <label class="payment-option"><input type="radio" name="paymentMethod" value="Pay on Delivery" checked><span><strong>Pay on Delivery</strong><small>Pay in cash when your order arrives.</small></span></label>
+        </section>
+      </div>
+
+      <aside class="checkout-summary checkout-card">
+        <div class="invoice-heading"><div><p class="eyebrow">Order summary</p><h2>Invoice preview</h2></div><img src="img/logo.jpeg" alt="MyScentDiary"></div>
+        <div class="invoice-meta"><span>Order Number<strong>Generated when placed</strong></span><span>Date<strong id="checkoutDate"></strong></span></div>
+        <div class="checkout-items" id="checkoutItems"></div>
+        <div class="invoice-totals">
+          <div><span>Subtotal</span><strong id="checkoutSubtotal">$0.00</strong></div>
+          <div><span>Delivery</span><strong id="checkoutDelivery">$0.00</strong></div>
+          <div class="grand-total"><span>Grand Total</span><strong id="checkoutTotal">$0.00</strong></div>
+        </div>
+        <div class="summary-detail"><span>Payment Method</span><strong>Pay on Delivery</strong></div>
+        <div class="summary-detail" id="customerPreview"><span>Customer</span><strong>Complete your details</strong></div>
+        <div class="summary-detail" id="addressPreview"><span>Delivery Address</span><strong>Complete your address</strong></div>
+        <button class="button primary full" type="submit" id="placeOrderButton">Place Order</button>
+        <a class="button ghost full" href="cart.html">Return to cart</a>
+        <p class="form-status error-status" id="checkoutStatus" aria-live="polite"></p>
+      </aside>
+    </form>
+  </main>
+
+  <footer class="footer"><div class="footer-container section-content"><div class="footer-brand"><h2>MyScentDiary</h2><p>Designer and niche perfumes curated for everyday shopping and gifting.</p></div><div><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3>Collections</h3><ul><li><a href="forher.html">For Her</a></li><li><a href="forhim.html">For Him</a></li><li><a href="unisex.html">Unisex</a></li></ul></div></div><p class="footer-bottom">&copy; 2026 MyScentDiary. All rights reserved.</p></footer>
+  <script src="script.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>

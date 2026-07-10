@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your MyScentDiary order confirmation.">
+  <title>Order Confirmed | MyScentDiary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="confirmation">
+  <header class="site-header"><nav class="navbar section-content" aria-label="Main navigation"><a href="index.html" class="nav-logo" aria-label="MyScentDiary home"><img src="img/logo.jpeg" alt="MyScentDiary" class="logo-image"></a><div class="nav-actions"><a href="cart.html" class="nav-link cart-pill" aria-label="View cart"><span class="cart-icon" aria-hidden="true"></span><span class="cart-count">0</span></a></div></nav></header>
+  <main class="confirmation-page section-content">
+    <section class="confirmation-card">
+      <div class="confirmation-check" aria-hidden="true">✓</div>
+      <p class="eyebrow">Order received</p>
+      <h1>Thank you for your order!</h1>
+      <p>Your order is awaiting confirmation. Complete the pre-filled WhatsApp message if it has not been sent yet.</p>
+      <div class="confirmation-details">
+        <div><span>Order Number</span><strong id="confirmationOrder">—</strong></div>
+        <div><span>Invoice Number</span><strong id="confirmationInvoice">—</strong></div>
+        <div><span>Estimated Delivery</span><strong id="confirmationDelivery">—</strong></div>
+      </div>
+      <div class="confirmation-actions"><a class="button primary" href="shop.html">Continue Shopping</a><a class="button ghost" href="invoice.html">View Invoice</a><a class="button ghost" id="whatsappFallback" href="#" target="_blank" rel="noopener noreferrer" hidden>Open WhatsApp</a></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="confirmation.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about MyScentDiary, an online perfume store with curated designer and niche fragrances.">
+  <title>About | MyScentDiary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <nav class="navbar section-content" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="MyScentDiary home">
+        <img src="img/logo.jpeg" alt="MyScentDiary" class="logo-image">
+                        <span class="logo-text">MyScentDiary</span>
+
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="mobile-menu-head">
+          <span>Menu</span>
+          <button class="close-menu" id="closeMenu" type="button" aria-label="Close menu">&times;</button> 
+        </li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item dropdown">
+          <div class="shop-wrapper">
+            <a href="shop.html" class="nav-link">Shop All</a>
+            <button class="dropdown-toggle" id="dropdownToggle" type="button" aria-label="Open shop categories" aria-expanded="false">&#8964;</button>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="forher.html" class="dropdown-link">For Her</a></li>
+            <li><a href="forhim.html" class="dropdown-link">For Him</a></li>
+            <li><a href="unisex.html" class="dropdown-link">Unisex</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+        <div class="nav-actions">
+      <a href="cart.html" class="nav-link cart-pill" aria-label="View cart">
+        <span class="cart-icon" aria-hidden="true"></span>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">&#9776;
+      </button> 
+    </div>
+
+    </nav>
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+  <main>
+    <section class="about-section section-content">
+      <div class="about-image">
+        <img src="img/about.jpeg" alt="MyScentDiary fragrance display" loading="lazy">
+      </div>
+      <div class="about-content">
+        <p class="eyebrow">About the store</p>
+        <h1>A curated online destination for perfumes.</h1>
+        <p>We are Myscentdiary, the Diary of your favorite Scent, We started with the simplest idea of bringing the most authentic and Amazing fragrance from different brands and various countries. From our founder to our service agents, we put lots of love and careful thoughts into curating these fragrances to match everyone’s taste and budget.</p>
+        <p>Perfume is like a moment of freedom, peace, love and sensuality in between the disturbance of modern living, it is also about the way it makes you feel. So We hope and believe that each perfume meets your every taste and brings you satisfaction.</p>
+        <div class="value-grid">
+          <span>Curated catalog</span>
+          <span>Gift-ready options</span>
+          <span>Everyday and occasion scents</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container section-content">
+      <div class="footer-brand"><h2>MyScentDiary</h2><p>Designer and niche perfumes curated for everyday shopping and gifting.</p></div>
+      <div><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h3>Collections</h3><ul><li><a href="forher.html">For Her</a></li><li><a href="forhim.html">For Him</a></li><li><a href="unisex.html">Unisex</a></li></ul></div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 MyScentDiary. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

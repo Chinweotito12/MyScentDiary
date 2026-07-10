@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MyScentDiary order invoice.">
+  <title>Invoice | MyScentDiary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="invoice">
+  <header class="site-header"><nav class="navbar section-content" aria-label="Main navigation"><a href="index.html" class="nav-logo" aria-label="MyScentDiary home"><img src="img/logo.jpeg" alt="MyScentDiary" class="logo-image"></a><div class="invoice-nav-note">Order placed successfully</div><div class="nav-actions"><a href="cart.html" class="nav-link cart-pill" aria-label="View cart"><span class="cart-icon" aria-hidden="true"></span><span class="cart-count">0</span></a></div></nav></header>
+  <main class="invoice-page section-content">
+    <section class="invoice-document" id="invoiceDocument">
+      <div class="invoice-top"><div class="invoice-brand"><img src="img/logo.jpeg" alt="MyScentDiary"><div><strong>MyScentDiary</strong><span>Designer and niche fragrances</span></div></div><div class="invoice-title"><p>Invoice</p><h1 id="invoiceNumber">—</h1><span id="invoiceDate"></span></div></div>
+      <div class="invoice-parties"><div><p class="eyebrow">Customer details</p><h2 id="invoiceCustomer">—</h2><p id="invoiceContact"></p></div><div><p class="eyebrow">Shipping address</p><h2>Delivery address</h2><p id="invoiceAddress"></p></div></div>
+      <div class="invoice-table-wrap"><table class="invoice-table"><thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead><tbody id="invoiceItems"></tbody></table></div>
+      <div class="invoice-footer-grid"><div class="invoice-status"><div><span>Payment Method</span><strong>Pay on Delivery</strong></div><div><span>Order Status</span><strong>Awaiting Confirmation</strong></div></div><div class="invoice-totals" id="invoiceTotals"></div></div>
+    </section>
+    <div class="invoice-actions"><button class="button primary" id="downloadInvoice" type="button">Download Invoice (PDF)</button><a class="button ghost" href="confirmation.html">View Order Confirmation</a></div>
+    <p class="invoice-redirect-note" id="invoiceRedirectNote">Opening order confirmation in 10 seconds…</p>
+  </main>
+  <script src="script.js"></script>
+  <script src="jspdf.umd.min.js"></script>
+  <script src="invoice.js"></script>
+</body>
+</html>
