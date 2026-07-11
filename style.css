@@ -10,13 +10,13 @@
   --rose: #6f2a35;
   --sage: #536f60;
   --gold: #a8823a;
-  --lavender: #d9dee8;
+  --lavender: #6681b7;
   --border: rgba(23, 23, 23, 0.12);
   --shadow: 0 16px 36px rgba(23, 23, 23, 0.1);
   --radius: 6px;
   --max: 1180px;
-  --font-display: "Nunito Sans", Arial, sans-serif;
-  --font-body: "Nunito Sans", Arial, sans-serif;
+  --font-display:"Cormorant Garamond", Georgia, serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
 }
 
 * {
@@ -165,7 +165,8 @@ ul {
 .nav-link.active,
 .dropdown-link:hover,
 .dropdown-toggle:hover {
-  background: var(--cream);
+  background: var(--lavender);
+  color:#edeff2;
 }
 
 /* ===========================
@@ -339,7 +340,7 @@ ul {
 }
 
 .overlay.active {
-  visibility: visible;
+  visibility: none;
   opacity: 1;
 }
 
@@ -348,7 +349,7 @@ ul {
   display: grid;
   place-items: center;
   padding: 78px 20px;
-  background-image: linear-gradient(rgba(23, 23, 23, 0.48), rgba(23, 23, 23, 0.5)), url("img/header3.jpeg");
+  background-image: linear-gradient(rgba(23, 23, 23, 0.48), rgba(23, 23, 23, 0.5)), url("img/hero1.jpeg");
   background-position: center;
   background-size: cover;
   color: white;
@@ -360,7 +361,7 @@ ul {
 }
 
 .eyebrow {
-  color: var(--rose);
+  color: var(--lavender);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -381,18 +382,18 @@ h2,
 h3 {
   font-family: var(--font-display);
   line-height: 1.04;
-  letter-spacing: 0;
+  letter-spacing: 1;
   color: var(--ink);
 }
 
 h1 {
-  margin-top: 14px;
-  font-size: clamp(2.1rem, 5vw, 4rem);
+  margin-top: 16px;
+  font-size: clamp(1rem, 4vw, 3rem);
   font-weight: 800;
 }
 
 h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-size: clamp(2.6rem, 3.5vw, 2.6rem);
     font-weight: 700;
 }
 
@@ -405,8 +406,8 @@ h3 {
 .hero-copy {
   max-width: 620px;
   margin: 22px auto 0;
-  font-size: clamp(1rem, 2.2vw, 1.18rem);
-  font-weight: 500;
+  font-size: clamp(1.3rem, 2.2vw, 1.18rem);
+  font-weight: 300;
   line-height: 1.75;
 }
 
@@ -428,7 +429,7 @@ h3 {
   min-height: 46px;
   padding: 11px 18px;
   border-radius: var(--radius);
-  border: 1px solid var(--ink);
+  border: 1px solid var(--sage);
   font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -445,7 +446,7 @@ h3 {
 .primary,
 .product-btn,
 .add-cart {
-  background: var(--ink);
+  background: var(--lavender);
   color: white;
 }
 
@@ -699,7 +700,7 @@ h3 {
 .collection-hero img {
   width: 100%;
   max-height: 280px;
-  object-fit: contain;
+  object-fit: cover;
   padding: 16px;
   background: var(--cream);
   border-radius: var(--radius);
@@ -823,6 +824,31 @@ textarea {
   color: var(--muted);
   font-size: 0.94rem;
   font-weight: 500;
+}
+
+.product-tag {
+  padding: 0.34rem 0.7rem;
+  border-radius: 30px;
+  color: black;
+  font-size: 0.50rem;
+  font-weight: 500;
+  text-transform:uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* For Him */
+.product-tag.him {
+  background: #d3e6ff;
+}
+
+/* For Her */
+.product-tag.her {
+  background: #ffc2d2;
+}
+
+/* Unisex */
+.product-tag.unisex {
+  background: #e1efd5;
 }
 
 .product-page {

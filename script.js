@@ -216,17 +216,137 @@ const products = [
     featured: true
   },
   {
-    id: "costa-brazil-aroma-body-oil",
-    name: "Aroma Body Oil",
-    brand: "Costa Brazil",
+    id: "ravine-ginger",
+    name: "Ravine Ginger",
+    brand: "French Avenue",
     category: "unisex",
-    price: 98,
+    price: 58,
     size: "100ml",
-    image: "img/costa brazil body oil.jpeg",
+    image: "img/ravineginger.jpeg",
     notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
     description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
     featured: false
-  }
+  },
+   {
+    id: "Gentleman-Givenchy",
+    name: "Gentleman Givenchy",
+    brand: "Givenchy",
+    category: "him",
+    price: 190,
+    size: "100ml",
+    image: "img/givenchygentleman.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
+   {
+    id: "Aromatic-Xandal",
+    name: "X Xandal",
+    brand: "French Avenue",
+    category: "him",
+    price: 69.50,
+    size: "100ml",
+    image: "img/xandalx.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
+   {
+    id: "Mad-Midnight",
+    name: "MAD Midnight",
+    brand: "MAD Parfum",
+    category: "him",
+    price: 58,
+    size: "100ml",
+    image: "img/madmidnight.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
+  {
+    id: "Mad-Draco",
+    name: "MAD Draco",
+    brand: "MAD Parfum",
+    category: "unisex",
+    price: 58,
+    size: "100ml",
+    image: "img/maddraco.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
+  {
+    id: "Mad-Narcotic",
+    name: "MAD Narcotic",
+    brand: "MAD Parfum",
+    category: "unisex",
+    price: 58,
+    size: "100ml",
+    image: "img/madnarcotic.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
+   {
+    id: "Chanel-no19",
+    name: "Chanel No 19",
+    brand: "Chanel",
+    category: "her",
+    price: 158,
+    size: "100ml",
+    image: "img/chanelno19.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
+   {
+    id: "Nishane-Meant",
+    name: "Nishane Meant To Be Seen",
+    brand: "Nishane",
+    category: "her",
+    price: 255,
+    size: "100ml",
+    image: "img/nishanemeant.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
+   {
+    id: "Nishane-Hacivat",
+    name: "Nishane Hacivat",
+    brand: "Nishane",
+    category: "him",
+    price: 230,
+    size: "100ml",
+    image: "img/nishanehacivat.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
+   {
+    id: "Nishane-Ani",
+    name: "Nishane ANI",
+    brand: "Nishane",
+    category: "unisex",
+    price: 250,
+    size: "100ml",
+    image: "img/nishaneani.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
+   {
+    id: "Lancome-Elixir",
+    name: "Lancome Elixir",
+    brand: "Lancome ",
+    category: "her",
+    price: 160,
+    size: "100ml",
+    image: "img/lancomeelixie.jpeg",
+    notes: "White jungle flora, Brazilian vetiver, sandalwood, patchouli",
+    description: "A nourishing body oil with a warm, woody aroma designed for layering with a favorite fragrance.",
+    featured: false
+  },
 ];
 
 const categoryLabels = {
@@ -273,7 +393,7 @@ function initFooterSocials() {
 
   footerBrand.insertAdjacentHTML("beforeend", `
     <div class="social-links" aria-label="Social media links">
-      <a href="https://www.instagram.com/myscentdiary" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/my_scentdiary?utm_source=qr" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.5"></circle><path d="M17.5 6.5h.01"></path></svg>
       </a>
       <a href="https://www.facebook.com/myscentdiary" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
@@ -398,9 +518,13 @@ function productCard(product) {
         <p>${product.brand}</p>
         <div class="product-meta">
           <strong class="product-price">${money.format(product.price)}</strong>
-          <span class="product-tag">${categoryLabels[product.category]}</span>
+          <span class="product-tag ${product.category}">
+            ${categoryLabels[product.category]}
+          </span>
         </div>
-        <button class="product-btn" type="button" data-add-to-cart="${product.id}">Add to cart</button>
+        <button class="product-btn" type="button" data-add-to-cart="${product.id}">
+          Add to cart
+        </button>
       </div>
     </article>
   `;
